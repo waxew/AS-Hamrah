@@ -19,7 +19,12 @@ import ru.beryukhov.coffeegram.model.DaysCoffeesStore
 
 
 @Composable
-fun CoffeeTypeItem(localDate: LocalDate, coffeeType: CoffeeType, count:Int, daysCoffeesStore: DaysCoffeesStore) {
+fun CoffeeTypeItem(
+    localDate: LocalDate,
+    coffeeType: CoffeeType,
+    count: Int,
+    daysCoffeesStore: DaysCoffeesStore
+) {
     Row(
         modifier = Modifier.padding(16.dp)
     ) {
@@ -68,6 +73,6 @@ fun CoffeeTypeItem(localDate: LocalDate, coffeeType: CoffeeType, count:Int, days
 @Composable
 private fun preview() {
     CoffeeTypeItem(
-        LocalDate.now(),Cappucino, 5, DaysCoffeesStore()
+        LocalDate.now(), Cappucino, 5, DaysCoffeesStore()
     )
 }
